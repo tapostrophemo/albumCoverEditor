@@ -1,0 +1,12 @@
+.fields {
+  box-sizing: border-box;
+  padding: 5px;
+  max-width: 350px;
+  color: $black;
+  background-color: $light-grey;
+  flex-grow: 1;
+  height: 550px;
+
+  display: flex;
+  flex-direction: column;
+}

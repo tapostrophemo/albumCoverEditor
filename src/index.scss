@@ -1,4 +1,6 @@
 @import "./stylesheets/variables";
+@import "./stylesheets/preview";
+@import "./stylesheets/fields";
 
 body {
   color: $white;
@@ -28,23 +30,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-basis: 100%;
     background-color: $dark-grey;
   }
-}
-
-.preview {
-  color: $black;
-  background-color: $white;
-  flex-grow: 5;
-  height: 560px;
-}
-
-.fields {
-  color: $black;
-  background-color: $light-grey;
-  flex-grow: 1;
-  height: 560px;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .button-bar {

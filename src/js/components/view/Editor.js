@@ -7,7 +7,7 @@ class Editor extends React.Component {
   render() {
     return (
       <div className="flex-container">
-        <PreviewPanel />
+        <PreviewPanel title="Traveling Man" artist="Intense Son" artwork="https://via.placeholder.com/900x900" />
         <FieldsPanel />
         <ButtonBar />
       </div>

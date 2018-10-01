@@ -1,0 +1,29 @@
+.preview {
+  box-sizing: border-box;
+  color: $black;
+  background-color: $white;
+  flex-grow: 5;
+  height: 550px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-top: 5px solid $white;
+  border-left: 5px solid $white;
+
+  position: relative;
+  .title {
+    position: absolute;
+    z-index: 3;
+  }
+  .artist {
+    position: absolute;
+    z-index: 2;
+  }
+  .artwork {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 540px;
+    max-height: 540px;
+  }
+}
