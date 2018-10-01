@@ -1,5 +1,7 @@
-$white: #fefefe;
-$black: #323232;
+$white: #ffffff;
+$black: #232323;
+$light-grey: lighten($black, 70%);
+$dark-grey: lighten($black, 15%);
 
 $font-stack: Arial, Helvetica, sans-serif;
 $font-stack-headings: "Arial Black", Helvetica, sans-serif;
