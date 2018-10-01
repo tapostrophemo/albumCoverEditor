@@ -6,10 +6,17 @@ import { Provider } from "react-redux";
 
 import "./index.scss";
 
-const appLoadingState = {};
+const appLoadingState = {
+  title: "Traveling Man",
+  artist: "Intense Son",
+  artwork: "https://via.placeholder.com/900x900"
+};
 
 const appReducer = (state = appLoadingState, action) => {
   switch (action.type) {
+  case "UPDATE_TITLE":
+  case "UPDATE_ARTIST":
+  case "UPDATE_ARTWORK":
   default:
     return state;
   }

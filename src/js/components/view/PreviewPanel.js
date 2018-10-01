@@ -1,4 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
+
+const mapStateToProps = state => ({
+  title: state.title,
+  artist: state.artist,
+  artwork: state.artwork
+});
 
 const PreviewPanel = ({ title, artist, artwork }) => {
   return (
@@ -10,4 +17,4 @@ const PreviewPanel = ({ title, artist, artwork }) => {
   );
 };
 
-export default PreviewPanel;
+export default connect(mapStateToProps)(PreviewPanel);

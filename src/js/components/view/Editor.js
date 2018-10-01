@@ -1,4 +1,5 @@
 import React from "react";
+
 import PreviewPanel from "./PreviewPanel";
 import FieldsPanel from "./FieldsPanel";
 import ButtonBar from "./ButtonBar";
@@ -7,7 +8,7 @@ class Editor extends React.Component {
   render() {
     return (
       <div className="flex-container">
-        <PreviewPanel title="Traveling Man" artist="Intense Son" artwork="https://via.placeholder.com/900x900" />
+        <PreviewPanel />
         <FieldsPanel />
         <ButtonBar />
       </div>
