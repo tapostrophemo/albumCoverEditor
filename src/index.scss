@@ -11,6 +11,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-stack-headings;
 }
 
+#root {
+  margin: 0 auto;
+  width: 900px;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -28,11 +33,23 @@ h1, h2, h3, h4, h5, h6 {
 .preview {
   color: $black;
   background-color: $white;
-  flex-grow: 4;
+  flex-grow: 5;
+  height: 560px;
 }
 
 .fields {
   color: $black;
   background-color: $light-grey;
   flex-grow: 1;
+  height: 560px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.button-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }

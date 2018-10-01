@@ -2,7 +2,9 @@ import React from "react";
 
 const ButtonBar = () => {
   return (
-    <div className="bar button-bar">[save/cancel button bar]</div>
+    <div className="bar button-bar">
+      <button>Save</button>
+    </div>
   );
 };
 

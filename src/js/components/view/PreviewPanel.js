@@ -2,7 +2,7 @@ import React from "react";
 
 const PreviewPanel = () => {
   return (
-    <div className="panel preview">[preview panel]</div>
+    <div className="panel preview"></div>
   );
 };
 
