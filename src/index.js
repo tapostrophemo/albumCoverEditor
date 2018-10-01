@@ -15,7 +15,9 @@ const appLoadingState = {
 const appReducer = (state = appLoadingState, action) => {
   switch (action.type) {
   case "UPDATE_TITLE":
+    return Object.assign({}, state, {title: action.title});
   case "UPDATE_ARTIST":
+    return Object.assign({}, state, {artist: action.artist});
   case "UPDATE_ARTWORK":
   default:
     return state;
