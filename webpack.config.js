@@ -17,7 +17,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              ["@babel/preset-env", { targets: "defaults" }]
+            ]
+          }
+        }
       },
       {
         test: /\.css$/,
@@ -26,7 +33,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          "style-loader",
+          //"style-loader", // not sure I understand if I'm now missing something, but see: https://stackoverflow.com/questions/63539242/module-build-failed-from-node-modules-mini-css-extract-plugin-dist-loader-js
           MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader"
