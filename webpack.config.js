@@ -49,5 +49,10 @@ module.exports = {
       template: "./src/index.html",
       hash: true
     })
-  ]
+  ],
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 2000
+  }
 };

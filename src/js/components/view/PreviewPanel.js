@@ -1,4 +1,5 @@
 import React from "react";
+import Draggable from "react-draggable";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
@@ -8,21 +9,15 @@ const mapStateToProps = state => ({
 });
 
 const PreviewPanel = ({ title, artist, artwork }) => {
-  // TODO: make the positioning of title/artist design elements editable (prob. via click/drag)
-  let titleStyle = {
-    position: "absolute",
-    top: 310 + "px",
-    left: 155 + "px"
-  };
-  let artistStyle = {
-    position: "absolute",
-    top: 15 + "px",
-    left: 40 + "px"
-  };
+
   return (
     <div className="panel preview">
-      <h1 className="title" style={titleStyle}>{title}</h1>
-      <h2 className="artist" style={artistStyle}>{artist}</h2>
+      <Draggable bounds={".preview"}>
+        <h1 className="title">{title}</h1>
+      </Draggable>
+      <Draggable bounds={".preview"}>
+        <h2 className="artist">{artist}</h2>
+      </Draggable>
       <img className="artwork" src={artwork} />
     </div>
   );

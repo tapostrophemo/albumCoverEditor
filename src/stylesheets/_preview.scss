@@ -10,14 +10,30 @@
   border-left: 5px solid $white;
 
   position: relative;
-  .title {
+
+  .title, .artist {
     position: absolute;
+    cursor: move;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
     z-index: 3;
+    top: 310px;
+    left: 155px;
   }
   .artist {
-    position: absolute;
     z-index: 2;
+    top: 15px;
+    left: 40px;
   }
+
+  .title:hover, .artist:hover {
+    background-color: lighten($light-grey, 5%);
+  }
+
   .artwork {
     z-index: 1;
     position: absolute;
