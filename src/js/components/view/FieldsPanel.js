@@ -1,33 +1,24 @@
 import React from "react";
-import { connect } from "react-redux";
+import AlbumContext from "../container/AlbumContext";
 
-import { updateTitle, updateArtist } from "../../actions/FieldActions";
-
-const mapStateToProps = state => ({
-  title: state.title,
-  artist: state.artist,
-  artwork: state.artwork
-});
-
-const mapDispatchToProps = dispatch => ({
-  onChangeTitle: e => { dispatch(updateTitle(e.target.value)) },
-  onChangeArtist: e => { dispatch(updateArtist(e.target.value)) }
-});
-
-const FieldsPanel = ({ title, artist, artwork, onChangeTitle, onChangeArtist }) => {
+const FieldsPanel = () => {
   return (
-    <div className="panel fields">
-      <label htmlFor="title">Title</label>
-      <input type="text" name="title" defaultValue={title} onChange={onChangeTitle} />
+    <AlbumContext.Consumer>
+      {({title, onChangeTitle, artist, onChangeArtist, artwork}) => (
+        <div className="panel fields">
+          <label htmlFor="title">Title</label>
+          <input type="text" name="title" defaultValue={title} onChange={(e) => onChangeTitle(e.target.value)} />
 
-      <label htmlFor="artist">Artist</label>
-      <input type="text" name="artist" defaultValue={artist} onChange={onChangeArtist} />
+          <label htmlFor="artist">Artist</label>
+          <input type="text" name="artist" defaultValue={artist} onChange={(e) => onChangeArtist(e.target.value)} />
 
-      <label htmlFor="artwork">Artwork</label>
-      <input type="file" name="artwork" />
-      <label className="help">Currently: {artwork}</label>
-    </div>
+          <label htmlFor="artwork">Artwork</label>
+          <input type="file" name="artwork" />
+          <label className="help">Currently: {artwork}</label>
+        </div>
+      )}
+    </AlbumContext.Consumer>
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FieldsPanel);
+export default FieldsPanel;

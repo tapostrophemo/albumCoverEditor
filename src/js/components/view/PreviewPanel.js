@@ -1,26 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import AlbumContext from "../container/AlbumContext";
 import Draggable from "react-draggable";
-import { connect } from "react-redux";
 
-const mapStateToProps = state => ({
-  title: state.title,
-  artist: state.artist,
-  artwork: state.artwork
-});
-
-const PreviewPanel = ({ title, artist, artwork }) => {
+const PreviewPanel = () => {
+  const album = useContext(AlbumContext);
 
   return (
     <div className="panel preview">
       <Draggable bounds={".preview"}>
-        <h1 className="title">{title}</h1>
+        <h1 className="title">{album.title}</h1>
       </Draggable>
       <Draggable bounds={".preview"}>
-        <h2 className="artist">{artist}</h2>
+        <h2 className="artist">{album.artist}</h2>
       </Draggable>
-      <img className="artwork" src={artwork} />
+      <img className="artwork" src={album.artwork} />
     </div>
   );
 };
 
-export default connect(mapStateToProps)(PreviewPanel);
+export default PreviewPanel;
