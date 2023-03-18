@@ -4,10 +4,10 @@
   background-color: $white;
   flex-grow: 5;
   height: 550px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  border-top: 5px solid $white;
-  border-left: 5px solid $white;
+  padding-right: $gutter;
+  padding-bottom: $gutter;
+  border-top: $gutter solid $white;
+  border-left: $gutter solid $white;
 
   position: relative;
 
