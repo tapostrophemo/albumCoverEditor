@@ -6,6 +6,7 @@ const AlbumContext = React.createContext({
   artist: "",
   onChangeArtist: (s) => {},
   artwork: "",
+  onChangeArtwork: (s) => {},
 });
 
 export default AlbumContext;

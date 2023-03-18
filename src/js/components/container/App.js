@@ -12,6 +12,7 @@ const App = () => {
     artist: artist,
     onChangeArtist: setArtist,
     artwork: artwork,
+    onChangeArtwork: setArtwork,
   };
 
   return (

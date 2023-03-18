@@ -4,7 +4,7 @@ import AlbumContext from "../container/AlbumContext";
 const FieldsPanel = () => {
   return (
     <AlbumContext.Consumer>
-      {({title, onChangeTitle, artist, onChangeArtist, artwork}) => (
+      {({title, onChangeTitle, artist, onChangeArtist, artwork, onChangeArtwork}) => (
         <div className="panel fields">
           <label htmlFor="title">Title</label>
           <input type="text" name="title" defaultValue={title} onChange={(e) => onChangeTitle(e.target.value)} />
@@ -12,9 +12,8 @@ const FieldsPanel = () => {
           <label htmlFor="artist">Artist</label>
           <input type="text" name="artist" defaultValue={artist} onChange={(e) => onChangeArtist(e.target.value)} />
 
-          <label htmlFor="artwork">Artwork</label>
-          <input type="file" name="artwork" />
-          <label className="help">Currently: {artwork}</label>
+          <label htmlFor="artwork">Artwork (URL)</label>
+          <input type="text" name="artwork" defaultValue={artwork} onChange={(e) => onChangeArtwork(e.target.value)} />
         </div>
       )}
     </AlbumContext.Consumer>
